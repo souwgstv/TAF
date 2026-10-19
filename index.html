@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Menção do TAF - EB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Calculadora TAF</h2>
+    <div class="subtitle">Diretriz para a Avaliação Física do EB (LEMB)</div>
+
+    <form id="tafForm">
+        <div class="form-group">
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" required>
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" min="18" max="65" placeholder="Ex: 25" required>
+        </div>
+
+        <div class="form-group">
+            <label for="corrida">Corrida de 12 min (metros):</label>
+            <input type="number" id="corrida" min="0" placeholder="Ex: 2800" required>
+        </div>
+
+        <div class="form-group">
+            <label for="flexao">Flexão de Braços (repetições):</label>
+            <input type="number" id="flexao" min="0" placeholder="Ex: 30" required>
+        </div>
+
+        <div class="form-group">
+            <label for="abdominal">Abdominal Supra (repetições):</label>
+            <input type="number" id="abdominal" min="0" placeholder="Ex: 50" required>
+        </div>
+
+        <div class="form-group" id="grupoBarra">
+            <label id="labelBarra" for="barra">Flexão na Barra Fixa (repetições):</label>
+            <input type="number" id="barra" min="0" placeholder="Ex: 7">
+        </div>
+
+        <button type="button" id="btnCalcular">Calcular Menção</button>
+    </form>
+
+    <div class="result-box" id="resultBox">
+        <h3>Resultado Obtido</h3>
+        <div class="result-item">
+            <span>Corrida de 12 min:</span>
+            <span id="resCorrida" class="badge"></span>
+        </div>
+        <div class="result-item">
+            <span>Flexão de Braços:</span>
+            <span id="resFlexao" class="badge"></span>
+        </div>
+        <div class="result-item">
+            <span>Abdominal Supra:</span>
+            <span id="resAbdominal" class="badge"></span>
+        </div>
+        <div class="result-item" id="resItemBarra">
+            <span>Flexão na Barra Fixa:</span>
+            <span id="resBarra" class="badge"></span>
+        </div>
+        <div class="global-score">
+            <span>CONCEITUAÇÃO GERAL:</span>
+            <span id="resGeral" class="badge"></span>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
